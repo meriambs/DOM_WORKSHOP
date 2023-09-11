@@ -1,0 +1,7 @@
+// first intro to the DOM 
+DOM (Document Object Model) en JavaScript est une représentation hiérarchique des éléments d'une page web.
+ Il permet aux développeurs web d'interagir avec les éléments HTML, CSS et JavaScript d'une page web de manière dynamique.
+  Avec le DOM, vous pouvez ajouter, modifier ou supprimer des éléments HTML, changer le style d'un élément, réagir aux événements utilisateur, etc. 
+  Cela permet de créer des pages web interactives et réactives. En JavaScript, vous pouvez accéder au DOM à l'aide d'API (Application Programming Interfaces) 
+  telles que document.querySelector, document.getElementById, addEventListener, etc. Cela permet de manipuler et de contrôler le contenu et le comportement 
+d'une page web en réponse aux actions de l'utilisateur ou à d'autres événements.

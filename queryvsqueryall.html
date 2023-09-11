@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- queryselctor vs queryselctorAll -->
+  the difference between querySelector() and querySelectorAll() in HTML and JavaScript with a simple example. 
+    These methods are used to select elements using CSS selectors, but they behave differently in terms of the results they return.
+
+Here's an example that shows the difference: 
+
+<ul>
+    <li class="item">Item 1</li>
+    <li class="item">Item 2</li>
+    <li class="item">Item 3</li>
+</ul>
+
+<script>
+    // Using querySelector to select the first element with class "item"
+    var firstItem = document.querySelector('.item');
+    firstItem.style.color = 'blue';
+
+    // Using querySelectorAll to select all elements with class "item"
+    var allItems = document.querySelectorAll('.item');
+    for (var i = 0; i < allItems.length; i++) {
+        allItems[i].style.backgroundColor = 'lightgray';
+    }
+    
+</script>
+
+In this example:
+
+querySelector('.item') selects the first element with the class "item" (i.e., "Item 1") and changes its text color to blue.
+
+querySelectorAll('.item') selects all elements with the class "item" (i.e., all list items) and changes their background color to light gray.
+
+When you run this code, you'll see that querySelector() returns only the first matching element, whereas querySelectorAll() returns a NodeList containing all matching elements. This demonstrates the key difference between the two methods.
+
+
+
+
+
+</body>
+</html>

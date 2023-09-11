@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Understanding selectors in the DOM (Document Object Model) is essential for interacting with HTML elements using JavaScript. 
+    Selectors allow you to target specific elements on a web page. Here, I'll provide examples of commonly used selectors with HTML and JavaScript for beginners.
+
+Selecting Elements by ID:
+You can select an element by its unique id attribute using getElementById(). -->
+
+<h1 id="myHeading">Hello, DOM!</h1>
+
+    <script>
+        // Select the element with id "myHeading"
+        var heading = document.getElementById('myHeading');
+        heading.textContent = 'Changed Heading Text';
+    </script>
+
+
+<!-- partie 2 : Selecting Elements by Tag Name: -->
+<!-- You can select elements by their tag names using getElementsByTagName(). -->
+
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<script>
+    // Select all list items (li elements)
+    var listItems = document.getElementsByTagName('li');
+    for (var i = 0; i < listItems.length; i++) {
+        listItems[i].textContent = 'List Item ' + (i + 1);
+    }
+</script>
+
+<!-- partie 3 : Selecting Elements by Class Name:
+You can select elements by their class names using getElementsByClassName(). -->
+
+<p class="highlight">This is a paragraph with class "highlight".</p>
+<p>This is a regular paragraph.</p>
+
+<script>
+    // Select all elements with class "highlight"
+    var highlightedElements = document.getElementsByClassName('highlight');
+    for (var i = 0; i < highlightedElements.length; i++) {
+        highlightedElements[i].style.color = 'red';
+    }
+</script>
+
+<!-- partie 4 : Selecting Elements by CSS Selector: -->
+<!-- You can use querySelector() and querySelectorAll() to select elements using CSS selectors. -->
+<div class="container">
+    <p>This is a paragraph inside a container.</p>
+</div>
+
+<script>
+    // Select the first element with class "container"
+    var container = document.querySelector('.container');
+    container.style.backgroundColor = 'lightblue';
+
+    // Select all paragraphs inside the container
+    var paragraphs = container.querySelectorAll('p');
+    for (var i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].textContent = 'Updated Paragraph Text';
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    To create a simple HTML page that toggles between two elements using JavaScript and the DOM, you can use the following code. 
+    In this example, we'll create two paragraphs and a button.
+     Clicking the button will toggle the visibility of the two paragraphs.
+     <p id="paragraph1">This is the first paragraph.</p>
+     <p id="paragraph2">This is the second paragraph.</p>
+     <button id="toggleButton">Toggle Elements</button>
+ 
+     <script>
+         // Get references to the elements
+         var paragraph1 = document.getElementById('paragraph1');
+         var paragraph2 = document.getElementById('paragraph2');
+         var toggleButton = document.getElementById('toggleButton');
+         var isParagraph1Visible = true;
+ 
+         // Function to toggle the visibility of the paragraphs
+         function toggleElements() {
+             if (isParagraph1Visible) {
+                 paragraph1.style.display = 'none';
+                 paragraph2.style.display = 'block';
+             } else {
+                 paragraph1.style.display = 'block';
+                 paragraph2.style.display = 'none';
+             }
+             isParagraph1Visible = !isParagraph1Visible;
+         }
+ 
+         // Add a click event listener to the button
+         toggleButton.addEventListener('click', toggleElements);
+     </script>
+
+In this code:
+
+We have two paragraphs (paragraph1 and paragraph2) and a button (toggleButton) in the HTML.
+
+We use JavaScript to get references to these elements using their IDs.
+
+We create a function called toggleElements that toggles the visibility of the paragraphs. Initially, paragraph1 is visible, and paragraph2 is hidden.
+ When the button is clicked, the function switches the visibility of the paragraphs.
+
+We add a click event listener to the button so that when it's clicked, it calls the toggleElements function, toggling the visibility of the paragraphs.
+
+As a result, when you click the "Toggle Elements" button, it will switch between showing paragraph1 and paragraph2, creating a toggle effect.
+</body>
+</html>
